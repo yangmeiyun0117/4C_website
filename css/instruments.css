@@ -1,0 +1,805 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #DAA520;
+    --text-color: #5A3E36;
+}
+:root {
+    --primary-color: #9a3b26;  /* 晋剧红 */
+    --secondary-color: #d4af37; /* 戏服金 */
+    --bg-color: #f5efe6;       /* 宣纸色 */
+        --text-color: #5A3E36;
+        --bg-gradient: linear-gradient(135deg, #F4F1DE 0%, #E7D7C1 100%);
+        --font-family: "华文楷体", "Microsoft YaHei", sans-serif;
+        --default-fill: #FFF3C7;
+        --special-fill: #D4E157;
+    }
+    
+
+body {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* 中间过渡背景 */
+    background: url('../assets/images/instruments/background.jpg') center/cover no-repeat;  
+    margin: 0;
+    font-family: "华文楷体", "KaiTi", "Microsoft YaHei", sans-serif;
+    overflow: hidden;
+}
+
+
+/* 幕布容器 */
+.curtain-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+
+/* 幕布左右部分 */
+.curtain {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.left-curtain {
+    left: 0;
+    background-image: url('../assets/images/instruments/右背景.jpg');
+}
+
+.right-curtain {
+    right: 0;
+    background-image: url('../assets/images/instruments/左背景.jpg');
+}
+
+/* 遮罩层 */
+.curtain::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* 主标题容器 - 新增 */
+.title-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+    pointer-events: none;
+}
+
+/* 主标题文字 - 修改 */
+.main-title {
+    display: inline-block;
+    color: white;
+    font-size: 4.5em;
+    font-family: '楷体', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: titleFade 1.5s ease-out forwards;
+    white-space: nowrap;
+}
+
+/* 乐器介绍容器 */
+.instrument-intro {
+    position: absolute;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    animation: slideUp 1s 0.5s ease-out forwards;
+    display: flex !important; /* 覆盖原有设置 */
+    flex-direction: row !important;
+    align-items: center;
+    width: 90%; /* 增加宽度 */
+    height: 55%;
+    top: 25% !important;
+}
+
+
+.left-intro {
+    left: 5% !important; /* 调整位置 */
+    top: 30%;
+    flex-direction: row;
+}
+
+.right-intro {
+    right: 5% !important; /* 调整位置 */
+    top: 30%;
+    flex-direction: row-reverse;
+}
+
+/* 底部提示文字 */
+.click-prompt {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: blink 2s infinite;
+    z-index: 3;
+}
+
+/* 新增内容容器 */
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 2vw; /* 使用视口单位，使内边距响应式 */
+    transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+.text-content {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    width: 350px; /* 自动调整宽度 */
+    height: 400px; /* 自动调整高度 */
+    line-height: 1.6; /* 增加行高，提高可读性 */
+    font-size: 1.1rem; /* 调整字体大小 */
+}
+
+/* 左幕布布局 */
+.left-intro .content-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.left-intro .text-content {
+    margin-right: 3vw; /* 使用视口单位，使边距响应式 */
+    text-align: left;
+    max-width: 60%;
+    animation: fadeInLeft 0.8s ease-out; /* 添加淡入左动画 */
+}
+
+.left-intro .gif-container {
+    margin-left: auto; /* 图片左对齐 */
+    animation: fadeInRight 0.8s ease-out; /* 添加淡入右动画 */
+}
+
+/* 右幕布布局 */
+.right-intro .content-wrapper {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.right-intro .text-content {
+    margin-left: 3vw; /* 使用视口单位，使边距响应式 */
+    text-align: right;
+    max-width: 60%;
+    animation: fadeInRight 0.8s ease-out; /* 添加淡入右动画 */
+}
+
+.right-intro .gif-container {
+    margin-right: auto; /* 图片右对齐 */
+    animation: fadeInLeft 0.8s ease-out; /* 添加淡入左动画 */
+}
+
+.text-content h3 {
+    font-size: 2.2em; /* 原约1.5em */
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-family: '楷体', cursive;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* 段落文字优化 */
+.text-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+/* 第二个页面 */
+.second-page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: none; /* 移除原有背景 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s 0.5s;
+    overflow-y: auto; /* 添加水平滚动 */
+}
+
+ /* 视频背景样式 */
+ .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#bgVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    filter: grayscale(20%) contrast(1.1);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg, 
+        rgba(245, 239, 230, 0.4) 0%,
+        rgba(245, 239, 230, 0.7) 100%
+    );
+    mix-blend-mode: multiply;
+}
+
+/* GIF容器 */
+.gif-container {
+    width: 250px !important;
+    height: 450px !important;
+    margin: 0 420px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 动画关键帧 */
+@keyframes titleFade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* 幕布动画 */
+.curtain-open .left-curtain {
+    width: 0;
+}
+
+.curtain-open .right-curtain {
+    width: 0;
+}
+
+.curtain-open + .second-page {
+    opacity: 1;
+}
+
+/* 修改幕布动画 */
+.curtain-open .main-title,
+.curtain-open .instrument-intro,
+.curtain-open .click-prompt {
+    opacity: 0 !important;
+}
+
+
+
+
+/* 主容器 */
+.main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 20px;
+    z-index: 1; /* 确保内容在视频上方 */
+}
+
+/* 3D卡片容器 */
+.card-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1200px;
+    margin-top: 20px;
+    cursor: pointer; /* 添加指针样式表明可点击 */
+    z-index: 2; /* 确保卡片在文字上层 */
+}
+
+/* 卡片通用样式 */
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    overflow: hidden;
+    pointer-events: none; /* 卡片本身不处理点击事件 */
+}
+
+/* 卡片初始状态 */
+.front-card {
+    transform: rotateX(0deg);
+    z-index: 2;
+    background: url('../assets/images/costumes/clothes1.png') center/cover;
+    filter: brightness(1);
+    opacity: 1;
+}
+
+.back-card {
+    transform: rotateX(-90deg) scale(0.8) translateY(15%);
+    opacity: 0;
+    background: url('../assets/images/costumes/红净卡通.png') center/cover;
+    filter: brightness(0.8) contrast(1.1); /* 降低亮度，增加对比度 */
+    z-index: 1;
+}
+
+
+/* 播放状态下的卡片动画 */
+.card-container.playing .front-card {
+    transform: rotateX(45deg);
+    filter: brightness(0.9);
+    opacity: 0.7;
+}
+
+
+.card-container.playing .back-card {
+    transform: rotateX(0deg) scale(1) translateY(-10%);
+    opacity: 0.95; /* 提高透明度 */
+    z-index: 3;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5); /* 增强阴影效果 */
+    filter: brightness(0.85) contrast(1.2); /* 调整亮度和对比度 */
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease; /* 添加filter过渡 */
+}
+
+/* 音乐播放器样式 */
+.music-player {
+    width: 420px; /* 增加宽度 */
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px; /* 增加内边距 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    color: white;
+    margin-top: 30px; /* 增加与卡片的间距 */
+}
+
+
+.player-controls {
+    display: flex;
+    justify-content: space-between; /* 前三个图标居中，最后一个图标靠右 */
+    align-items: center; /* 垂直居中 */
+    width: 100%; /* 确保容器宽度占满父容器 */
+    padding: 0 20px; /* 左右留出一些间距 */
+    margin-top: 25px; /* 增加与进度条的间距 */
+}
+
+.control-group {
+    display: flex;
+    gap: 20px; /* 前三个图标之间的间距 */
+    margin: 0 auto; /* 使前三个图标居中 */
+}
+
+.control-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    font-size: 20px; /* 增大图标尺寸 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+}
+
+.progress-container {
+    background: rgba(255,255,255,0.1);
+    height: 6px;
+    border-radius: 3px;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #3498db;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 8px; /* 增加与进度条的间距 */
+    color: rgba(255,255,255,0.8);
+}
+
+/* 新增文字介绍样式 */
+.text-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    padding: 25px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    pointer-events: none; /* 防止文字区域阻挡点击 */
+}
+
+
+.left-text {
+    right: calc(100% + 40px);
+    transform: translateY(-50%) translateX(-30px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.right-text {
+    left: calc(100% + 40px);
+    transform: translateY(-50%) translateX(30px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+.text-container.active {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.text-title {
+    font-size: 30px;
+    color: #742525;
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.text-desc {
+    font-size: 18px;
+    color: rgba(26, 8, 8, 0.9);
+    line-height: 1.6;
+}
+
+/* 选项卡样式 */
+.tab-container {
+    display: none; /* 默认隐藏选项卡 */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 10;
+    width: 250px; /* 增加宽度 */
+    max-height: 200px; /* 设置最大高度 */
+    overflow-y: auto; /* 添加垂直滚动条 */
+    scrollbar-width: thin; /* 适用于Firefox */
+    scrollbar-color: rgba(255,255,255,0.3) transparent; /* 适用于Firefox */
+}
+
+/* 为Chrome等浏览器定制滚动条 */
+.tab-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tab-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tab-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 3px;
+}
+
+.tab-container.active {
+    display: block; /* 点击后显示选项卡 */
+}
+
+.tab {
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: rgb(10, 1, 1);
+    margin-bottom: 8px;
+    pointer-events: auto; /* 确保选项卡可以点击 */
+}
+
+.tab:last-child {
+    margin-bottom: 0;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* 点击图标样式 */
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-left: auto; /* 最后一个图标靠右 */
+}
+
+.menu-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/*音乐名称*/
+.music-title {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    opacity: 1;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    padding: 0 20px; /* 增加左右内边距 */
+}
+
+.music-title.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 新增的大卡片样式 */
+.main-card {
+    cursor: pointer;
+    position: relative;
+    width: 520px;
+    padding: 40px 30px; /* 调整内边距 */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    z-index: 1;
+    background: url('../assets/images/instruments/背景.jpg') center/cover no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* 可选：添加边框增强立体感 */
+}
+
+/* 调整主容器的布局 */
+.main-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 20px;
+
+    margin-top: 80px; /* 调整主容器的位置 */
+}
+
+
+/* 播放状态下的文字动画 */
+.main-card.active .left-text,
+.main-card.active .right-text {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* 播放状态下的文字动画 */
+.card-container.playing .left-text,
+.card-container.playing .right-text {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+    /* ===== 导航菜单样式 ===== */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1rem 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(5px);
+        border-bottom: 2px solid #d4af37; /* 主题金色 */
+    }
+    
+    .nav-item {
+        color: #9a3b26; /* 主题红色 */
+        text-decoration: none;
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        background: transparent;
+        border: 2px solid transparent;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+        margin: 0 0.5rem;
+    }
+    
+    .nav-item i {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-item:hover, 
+    .nav-item.active {
+        background: #9a3b26; /* 主题红色 */
+        color: white;
+        border-color: #d4af37; /* 主题金色 */
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(154, 59, 38, 0.3);
+    }
+    
+    .nav-item:hover i {
+        color: #d4af37; /* 主题金色 */
+        transform: scale(1.1);
+    }
+    
+    /* 水袖动画效果 */
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #d4af37; /* 主题金色 */
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(-50%);
+    }
+    
+    .nav-item:hover::after {
+        width: 70%;
+    }
+    
+    /* 左侧分类导航 */
+    .category-nav {
+        position: fixed;
+        left: 20px;
+        top: 100px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #d4af37;
+    }
+    
+    .category-item {
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #9a3b26;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .category-item:hover, 
+    .category-item.active {
+        background: #9a3b26;
+        color: white;
+        transform: translateX(5px);
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 992px) {
+        .nav-menu {
+            padding: 0.8rem 0;
+        }
+        .nav-item {
+            padding: 0.6rem 1rem;
+            font-size: 1rem;
+        }
+        .category-nav {
+            left: 10px;
+            top: 80px;
+            padding: 10px;
+        }
+        .category-item {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .nav-menu {
+            padding: 0.6rem 0;
+            gap: 0.5rem;
+        }
+        .nav-item {
+            padding: 0.5rem 0.8rem;
+            font-size: 0.9rem;
+        }
+        .nav-item span {
+            display: none;
+        }
+        .nav-item i {
+            font-size: 1.1rem;
+        }
+        .category-nav {
+            flex-direction: row;
+            bottom: 20px;
+            top: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            justify-content: center;
+        }
+        .category-item {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+        }
+    }
+
