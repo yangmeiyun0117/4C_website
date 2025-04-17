@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>晋剧文化传播地图</title>
+    <link rel="stylesheet" href="../css/map.css">
+</head>
+<body>
+    <div id="map-container">
+        <div id="background-layer"></div>
+        <canvas id="map-canvas"></canvas>
+        <svg id="arrows-svg" class="arrow-svg"></svg>
+        <div id="tooltip"></div>
+        <h2 id="info-title">晋剧的传播</h2>
+        <div id="info-display" class="visible">
+            <div class="info-content">
+                <p>晋剧起源于清朝中叶的山西省，以太原市为中心，逐步在晋中、晋北等地区传播并流行开来，形成了不同的地方流派。随着时间的推移，晋剧的影响力逐渐扩展到省外，特别是在邻近的内蒙古地区以及河北省与陕西省，晋剧以其独特的艺术魅力受到了当地民众的广泛欢迎和喜爱。</p>
+            </div>
+        </div>
+    </div>
+
+     <!-- 导航菜单 -->
+   <nav class="nav-menu">
+    <a href="home.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>梨园初章</span>
+    </a>
+    <a href="history.html" class="nav-item">
+        <i class="fas fa-history"></i>
+        <span>粉墨春秋</span>
+    </a>
+    <a href="map.html" class="nav-item active">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>行当经纬</span>
+    </a>
+    <a href="roles.html" class="nav-item">
+        <i class="fas fa-masks-theater"></i>
+        <span>晋韵流芳</span>
+    </a>
+    <a href="instruments.html" class="nav-item">
+        <i class="fas fa-music"></i>
+        <span>八音琳琅</span>
+    </a>
+    <a href="costumes.html" class="nav-item">
+        <i class="fas fa-vest"></i>
+        <span>霓裳锦绣</span>
+    </a>
+    <a href="game.html" class="nav-item">
+        <i class="fas fa-gamepad"></i>
+        <span>乐园天地</span>
+    </a>
+    <a href="data-analysis.html" class="nav-item">
+        <i class="fas fa-chart-line"></i>
+        <span>数据观象</span>
+    </a>
+</nav>
+
+    <script src="../js/map.js"></script>
+
+</body>
+</html>
