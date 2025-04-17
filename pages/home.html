@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- <base href="../assets/images/home/">  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晋韵千秋 - 晋剧数字博物馆</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <!-- 在body开始处添加视频容器 -->
+<div class="video-background">
+    <video autoplay muted loop playsinline id="bgVideo">
+        <!-- 提供两种视频格式 -->
+        <!-- <source src="media/background.webm" type="video/webm"> -->
+        <!-- <source src="../assets/videos/背景3.mp4" type="video/mp4"> -->
+        <!-- 备用图片 -->
+        <img src="../assets/images/home/background.jpg" alt="背景备用图片">
+    </video>
+    <div class="video-overlay"></div>
+</div>
+</head>
+<body>
+   <!-- 导航菜单 -->
+   <nav class="nav-menu">
+    <a href="home.html" class="nav-item active">
+        <i class="fas fa-home"></i>
+        <span>梨园初章</span>
+    </a>
+    <a href="history.html" class="nav-item">
+        <i class="fas fa-history"></i>
+        <span>粉墨春秋</span>
+    </a>
+    <a href="map.html" class="nav-item">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>行当经纬</span>
+    </a>
+    <a href="roles.html" class="nav-item">
+        <i class="fas fa-masks-theater"></i>
+        <span>晋韵流芳</span>
+    </a>
+    <a href="instruments.html" class="nav-item">
+        <i class="fas fa-music"></i>
+        <span>八音琳琅</span>
+    </a>
+    <a href="costumes.html" class="nav-item">
+        <i class="fas fa-vest"></i>
+        <span>霓裳锦绣</span>
+    </a>
+    <a href="game.html" class="nav-item">
+        <i class="fas fa-gamepad"></i>
+        <span>乐园天地</span>
+
+    <a href="data-analysis.html" class="nav-item">
+        <i class="fas fa-chart-line"></i>
+        <span>数据观象</span>
+    </a>
+</nav>
+
+    <!-- 首页标题区 -->
+    <section class="hero-section">
+        <h1 class="main-title">晋韵千秋</h1>
+        <div class="scroll-hint">
+            <i class="fas fa-chevron-down"></i> 向下滚动
+        </div>
+    </section>
+
+    <!-- 晋剧简介内容区 -->
+<section class="intro-section">
+    <div class="intro-content">
+        <h2 class="intro-title">晋剧艺术</h2>
+        <div class="intro-text">
+            <p>晋剧，又称山西梆子，是中国北方重要的戏曲剧种之一，起源于明代中叶，至今已有五百余年的悠久历史。作为山西地方戏曲的代表，它植根于三晋大地，汲取了蒲州梆子、北路梆子等地方戏曲的精华，在漫长的艺术实践中形成了独特的表演体系和艺术风格。</p>
+            
+            <p>晋剧的唱腔以梆子腔为主体，音调高亢激昂，旋律优美动听，具有浓郁的地方特色。其唱腔体系可分为平板、二性、流水、介板四大类，每种板式都有其独特的节奏和表现力。表演艺术上，晋剧讲究"四功五法"——唱、念、做、打和手、眼、身、法、步，演员通过程式化的表演，将人物性格和情感表现得淋漓尽致。特别是其特有的"梢子功"、"帽翅功"等特技表演，更是展现了晋剧表演艺术的独特魅力。</p>
+            
+            <p>晋剧的行当划分严谨细致，主要分为生、旦、净、丑四大行当，每个行当又有更细致的分类。如生行又分须生、小生、武生等；旦行有青衣、花旦、老旦等；净行有大花脸、二花脸之分；丑行则有文丑、武丑之别。这种完善的行当体系，使得晋剧能够塑造各种不同类型的人物形象。</p>
+            
+            <p>在音乐伴奏方面，晋剧以板胡为主奏乐器，配以二弦、三弦、月琴等弦乐，以及鼓板、梆子等打击乐器，形成了独特的"文场"和"武场"伴奏体系。其音乐既有北方戏曲的豪放粗犷，又不失细腻婉转，能够很好地烘托剧情和人物情感。</p>
+            
+            <p>晋剧的传统剧目十分丰富，据统计有上千出之多，代表性的有《打金枝》、《下河东》、《算粮》、《金水桥》等。这些剧目题材广泛，既有反映历史事件的大戏，也有表现民间生活的小戏，既有忠孝节义的严肃题材，也有诙谐幽默的喜剧作品。</p>
+            
+            <p>近年来，在文化部门的支持下，晋剧艺术得到了很好的保护和传承。一方面，传统剧目得到系统整理和复排；另一方面，新编剧目如《晋风颂》、《山西梆子》等不断涌现，使这一古老艺术焕发出新的活力。2006年，晋剧被列入第一批国家级非物质文化遗产名录，标志着这一艺术瑰宝得到了国家的重视和保护。</p>
+            
+            <p>今天的晋剧，既保持着传统的艺术精髓，又积极吸收现代戏剧的表现手法，在保持特色的同时不断创新。通过走进校园、数字化传播等方式，晋剧艺术正在被更多年轻人所了解和喜爱，这门古老的艺术正在新时代绽放出绚丽的光彩。</p>
+        </div>
+    </div>
+    <div class="intro-image">
+        <img src="../assets/images/home/首页晋剧表演.jpg" alt="晋剧表演艺术">
+        <div class="image-caption">晋剧经典剧目《打金枝》表演剧照</div>
+    </div>
+</section>
+
+<!-- 行当分类 -->
+<section class=" roles-section" >
+    <h2>晋剧行当分类</h2>
+    <div class="roles-intro">
+        <p>晋剧行当分工细致，各具特色，主要分为"生、旦、净、丑"四大行当，每个行当又有细分，共同构成晋剧丰富的表演体系。</p>
+    </div>
+    
+    <div class="roles-grid">
+        <!-- 生行 -->
+        <div class="role-card">
+            <div class="role-header">
+                <i class="fas fa-user-tie"></i>
+                <h3>生行</h3>
+            </div>
+            <div class="role-image">
+                <img src="../assets/images/home/生行.png" alt="生行">
+                <div class="role-overlay">
+                    <span>小生</span>
+                </div>
+            </div>
+            <div class="role-content">
+                <p>生行是晋剧中的男性角色，包括：</p>
+                <ul>
+                    <li><strong>须生</strong>：戴髯口的中老年男性</li>
+                    <li><strong>小生</strong>：年轻男性角色</li>
+                    <li><strong>武生</strong>：擅长武打的男性</li>
+                </ul>
+                <button class="role-btn" onclick="playAudio('../assets/images/home/生行《空城计》.mp3')">
+                    <i class="fas fa-play"></i> 听生行唱段
+                </button>
+            </div>
+        </div>
+        
+        <!-- 旦行 -->
+        <div class="role-card">
+            <div class="role-header">
+                <i class="fas fa-female"></i>
+                <h3>旦行</h3>
+            </div>
+            <div class="role-image">
+                <img src="../assets/images/home/旦行.jpg" alt="旦行">
+                <div class="role-overlay">
+                    <span>青衣</span>
+                </div>
+            </div>
+            <div class="role-content">
+                <p>旦行是晋剧中的女性角色，包括：</p>
+                <ul>
+                    <li><strong>青衣</strong>：端庄稳重的女性</li>
+                    <li><strong>花旦</strong>：活泼俏皮的少女</li>
+                    <li><strong>老旦</strong>：老年女性角色</li>
+                </ul>
+                <button class="role-btn" onclick="playAudio('../assets/images/home/旦行《打金枝》.mp3')">
+                    <i class="fas fa-play"></i> 听旦行唱段
+                </button>
+            </div>
+        </div>
+        
+        <!-- 净行 -->
+        <div class="role-card">
+            <div class="role-header">
+                <i class="fas fa-mask"></i>
+                <h3>净行</h3>
+            </div>
+            <div class="role-image">
+                <img src="../assets/images/home/净行.jpg" alt="净行">
+                <div class="role-overlay">
+                    <span>武花脸</span>
+                </div>
+            </div>
+            <div class="role-content">
+                <p>净行以脸谱为标志，包括：</p>
+                <ul>
+                    <li><strong>大花脸</strong>：性格刚烈的角色</li>
+                    <li><strong>二花脸</strong>：勇猛豪爽的角色</li>
+                    <li><strong>武花脸</strong>：擅长武打的角色</li>
+                </ul>
+                <button class="role-btn" onclick="playAudio('../assets/images/home/净行《铡美案》.mp3')">
+                    <i class="fas fa-play"></i> 听净行唱段
+                </button>
+            </div>
+        </div>
+        
+        <!-- 丑行 -->
+        <div class="role-card">
+            <div class="role-header">
+                <i class="fas fa-theater-masks"></i>
+                <h3>丑行</h3>
+            </div>
+            <div class="role-image">
+                <img src="../assets/images/home/丑行.jpg" alt="丑行">
+                <div class="role-overlay">
+                    <span>文丑</span>
+                </div>
+            </div>
+            <div class="role-content">
+                <p>丑行是喜剧角色，包括：</p>
+                <ul>
+                    <li><strong>文丑</strong>：幽默诙谐的角色</li>
+                    <li><strong>武丑</strong>：动作灵活的角色</li>
+                    <li><strong>彩旦</strong>：滑稽的女性角色</li>
+                </ul>
+                <button class="role-btn" onclick="playAudio('../assets/images/home/丑行《拾玉镯》.mp3')">
+                    <i class="fas fa-play"></i> 听丑行唱段
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 修改后的3D/AR体验区 -->
+<section class="ar-section">
+    <div class="section-container">
+        <h2 class="section-title">虚实交融</h2>
+        <p class="section-subtitle">体验科技赋能的晋剧之美</p>
+        
+        <div class="ar-content">
+            <div class="ar-card">
+                <!-- 3D场景容器 -->
+                <div class="ar-scene-container">
+                    <iframe 
+                        src="https://www.kivicube.com/scenes/2N5P877252bB6349NRUin5hL7800r4k0" 
+                        class="ar-iframe"
+                        allowfullscreen
+                        allow="xr-spatial-tracking"
+                    ></iframe>
+                    
+<!-- 修改后的扫描引导层部分 -->
+<div class="scan-guide">
+    <div class="qr-section">
+        <!-- 修改后的图片容器 -->
+        <div class="scan-image-container">
+            <img src="../assets/images/home/ar.png" 
+                 alt="晋剧扫描图" 
+                 class="scan-image">
+            <div class="scan-overlay">
+                <i class="fas fa-expand"></i>
+                <p>扫描此图案开启AR体验</p>
+            </div>
+        </div>
+        
+        <div class="scan-steps">
+            <p class="step"><i class="fas fa-mobile-alt"></i> 打开微信扫一扫</p>
+            <p class="step"><i class="fas fa-qrcode"></i> 对准识别图案</p>
+            <p class="step"><i class="fas fa-theater-masks"></i> 欣赏晋剧人物</p>
+        </div>
+    </div>
+    
+    <!-- 星级评价
+    <div class="rating-container">
+        <div class="rating-item">
+            <span>模型精度</span>
+            <div class="stars">★★★★☆</div>
+        </div>
+        <div class="rating-item">
+            <span>动作流畅度</span>
+            <div class="stars">★★★☆☆</div>
+        </div>
+    </div> -->
+</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 关于我们团队部分 -->
+<section class="team-section">
+    <div class="section-container">
+        <h2 class="section-title">传承团队</h2>
+        <p class="section-subtitle">汇聚传统艺术与现代技术的守护者</p>
+        
+        <div class="team-grid">
+            <!-- 团队成员1 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="../assets/images/home/team/杨.jpg" alt="杨美云">
+                    <div class="team-overlay">
+                        <h3>杨美云</h3>
+                        <p>团队队长</p>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>杨美云</h3>
+                    <p class="team-title">团队队长</p>
+                    <p class="team-desc">在本项目中，我作为项目核心负责人与团队队长，全面统筹从文化价值挖掘到技术实现的全流程管理工作。项目初期，为明确团队开发方向，我首创"双导师驱动"机制，邀请非物质文化遗产研究教授与计算机专业教授分别担任文化顾问与技术顾问，双轨保障项目的学术严谨性与技术可行性。通过系统调研晋剧传承现状，我主导完成项目架构设计与技术方案整合，制定成员分工方案与代码开发规范，成功整合团队成员开发的八个独立功能模块，建立标准化前端代码结构（CSS样式层/JavaScript逻辑层/HTML视图层），实现项目代码的模块化管理和高可维护性，为团队高效协作与项目顺利推进奠定坚实基础。
+                        <div class="team-social">
+                            <a href="13007087209"><i class="fab fa-weixin"></i></a>
+                            <a href="13007087209.@163.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 团队成员2 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="../assets/images/home/team/范.jpg" alt="团队成员">
+                    <div class="team-overlay">
+                        <h3>范泽峥</h3>
+                        <p>团队成员</p>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>范泽峥</h3>
+                    <p class="team-title">团队成员</p>
+                    <p class="team-desc">
+                        在本项目中，我深入参与了文化传播与数据可视化模块的设计与开发，独立完成了历史沿革时间轴与首页核心模块的构建。通过灵活运用HTML5、CSS3及JavaScript技术，我搭建了具有动态交互效果的历史沿革可视化组件，采用响应式设计确保多终端适配。作为项目整合负责人，我主导了多模块的联调与风格统一工作，通过制定组件化开发规范，将团队成员开发的晋剧乐器、晋剧服饰，生旦净丑等子页面有机整合，保障了整体项目视觉统一性与用户体验的流畅性。
+                        最终与整个团队一起交付了兼具学术严谨性与大众传播性的数字化晋剧文化展示平台。
+                    </p>
+                    <div class="team-social">
+                        <a href="https://github.com/tobeliberal"><i class="fab fa-github"></i></a>
+                        <a href="https://mail.163.com/js6/main.jsp?sid=CNVcGevGgRNkUIoioVGGVopBxrXbZyxn&df=mailmaster_mail_mail163#module=mbox.ListModule%7C%7B%22filter%22%3A%7B%22flags%22%3A%7B%22read%22%3Afalse%7D%7D%2C%22order%22%3A%22date%22%2C%22desc%22%3Atrue%2C%22fids%22%3A%5B1%2C3%2C18%5D%7D"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 团队成员3 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="../assets/images/home/team/韩.jpg" alt="韩乃圣">
+                    <div class="team-overlay">
+                        <h3>韩乃圣</h3>
+                        <p>团队成员</p>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>韩乃圣</h3>
+                    <p class="team-title">团队成员</p>
+                    <p class="team-desc">
+                        在本项目中，我通过对文化传播与数据可视化的深刻理解，精心设计并实现了项目中的互动地图与数据分析模块。结合 HTML、CSS 和 JavaScript 等技术，我创建了一个可交互的晋剧文化传播地图，精确呈现了晋剧在各地的传播路径及其文化影响力，同时利用 SVG 和 Canvas 技术优化了地图的视觉效果与动画表现。 
+                        在数据可视化方面，我运用 ECharts 实现了多个图表，展现了晋剧热度的多个维度，如演出场次、剧团数量、受众群体等。通过编程与设计的结合，我确保了图表的交互性与动态更新，提升了数据展示的清晰度与用户体验。
+                        </p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="3300490845@qq.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 团队成员4 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="../assets/images/home/team/郭.jpg" alt="团队成员">
+                    <div class="team-overlay">
+                        <h3>郭章辉</h3>
+                        <p>团队成员</p>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>郭章辉</h3>
+                    <p class="team-title">团队成员</p>
+                    <p class="team-desc">在本次计算机设计大赛项目中，我承担着服饰与乐器相关的关键工作。我凭借对艺术美感的独特理解，精心挑选适配项目风格的服饰元素，通过计算机图形处理技术进行创新设计与优化。对于乐器部分，我运用编程知识，实现乐器音效的模拟与特效处理。过往积累的跨领域实践经验，让我能高效整合各方资源，确保服饰与乐器元素在项目中完美融合，为作品增添独特魅力。</p>
+                    <div class="team-social">
+                        <a href="https://github.com/dreamGuo8"><i class="fab fa-github"></i></a>
+                        <a href="1347916517@qq.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 团队成员5 -->
+             <div class="team-card">
+                <div class="team-image">
+                    <img src="../assets/images/home/team/刘.jpg" alt="刘雨宣">
+                    <div class="team-overlay">
+                        <h3>刘雨萱</h3>
+                        <p>团队成员</p>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>刘雨萱</h3>
+                    <p class="team-title">团队成员</p>
+                    <p class="team-desc">在团队中，我担任前端开发工程师的角色，通过项目，我积累了丰富的前端开发经验，熟练掌握了HTML、CSS和JavaScript等技术，并能够高效地实现网页的布局、样式和交互功能。我具备良好的代码组织和优化能力，注重用户体验，能够将传统文化元素与现代网页设计相结合，创造出既有教育意义又具娱乐性的作品。同时，我也善于与团队成员协作，快速解决开发过程中遇到的问题，确保项目顺利推进。</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="1606484042@qq.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        
+        <div class="team-mission">
+            <h3><i class="fas fa-bullseye"></i> 我们的使命</h3>
+            <p>通过数字化技术保护与传承晋剧艺术，让这一古老艺术形式在新时代焕发新生。我们致力于构建最完整的晋剧数字资料库，开发互动学习平台，让更多人了解、喜爱并传承晋剧文化。</p>
+            
+            <h3><i class="fas fa-handshake"></i> 加入我们</h3>
+            <p>如果您热爱传统文化，具备相关专业技能，欢迎加入我们的团队！联系方式：<a href="mailto:join@jinyunmuseum.org">13294668088@163.com</a></p>
+        </div>
+    </div>
+</section>
+
+<script src="../js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #DAA520;
+    --text-color: #5A3E36;
+}
+/* ===== 基础样式 ===== */
+:root {
+--primary-color: #9a3b26;  /* 晋剧红 */
+--secondary-color: #d4af37; /* 戏服金 */
+--bg-color: #f5efe6;       /* 宣纸色 */
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* ===== 页面布局 ===== */
+body {
+font-family: "华文楷体", "KaiTi", "Microsoft YaHei", sans-serif;
+padding-top: 80px;
+background: var(--bg-color);
+background: linear-gradient(rgba(245, 239, 230, 0.7), rgba(245, 239, 230, 0.5)), 
+ url('../assets/images/historys/background.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-blend-mode: lighten;
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+body::after {
+content: '';
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: repeating-linear-gradient(
+ 45deg,
+ transparent,
+ transparent 2px,
+ rgba(154,59,38,0.05) 3px,
+ rgba(154,59,38,0.05) 5px
+);
+pointer-events: none;
+z-index: -1;
+}
+
+.main-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+padding: 2rem;
+gap: 2rem;
+height: auto;
+min-height: 100vh;
+}
+
+/* ===== 导航菜单 ===== */
+.nav-menu {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+width: 100%;
+z-index: 100;
+display: flex;
+justify-content: center;
+gap: 1rem;
+background: rgba(255, 255, 255, 0.95);
+padding: 1rem 0;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+backdrop-filter: blur(5px);
+border-bottom: 2px solid var(--secondary-color);
+}
+
+.nav-item {
+color: var(--primary-color);
+text-decoration: none;
+font-size: 1.1rem;
+padding: 0.8rem 1.5rem;
+border-radius: 25px;
+transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+background: transparent;
+border: 2px solid transparent;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+position: relative;
+overflow: hidden;
+margin: 0 0.5rem;
+}
+
+.nav-item i {
+transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item:hover, 
+.nav-item.active {
+background: var(--primary-color);
+color: white;
+border-color: var(--secondary-color);
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(154, 59, 38, 0.3);
+}
+
+.nav-item:hover i {
+color: var(--secondary-color);
+transform: scale(1.1);
+}
+
+.nav-item::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+width: 0;
+height: 2px;
+background: var(--secondary-color);
+transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+width: 70%;
+}
+
+/* ===== 轮盘系统 ===== */
+.wheel-section {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.timeline-wheel {
+width: 600px;
+height: 600px;
+border-radius: 50%;
+background: 
+ radial-gradient(circle at 50% 50%, 
+ rgba(154,59,38,0.8) 20%,
+ rgba(154,59,38,0.4) 60%,
+ rgba(154,59,38,0.2) 100%),
+ url('晋剧纹理.jpg') center/cover,
+ linear-gradient(45deg, 
+ rgba(212,175,55,0.1) 0%,
+ rgba(154,59,38,0.2) 100%);
+position: relative;
+z-index: 1;
+transition: transform 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+box-shadow: 0 0 50px rgba(154,59,38,0.2);
+border: 3px solid rgba(212,175,55,0.3);
+overflow: visible;
+}
+
+.timeline-wheel::before {
+content: '';
+position: absolute;
+z-index: 0;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url('../assets/images/historys/传统回纹.jpg') center/contain;
+opacity: 0.15;
+pointer-events: none;
+}
+
+.center-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+width: 60%;
+z-index: 10;
+}
+
+.center-image {
+width: 350px;
+height: 350px;
+border: 5px solid var(--secondary-color);
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 1.5rem;
+transition: opacity 0.5s ease;
+}
+
+.center-description {
+color: white;
+line-height: 1.5;
+background: rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+opacity: 0;
+transition: opacity 0.5s ease;
+font-size: 16px;
+padding: 15px;
+margin: 0 auto;
+max-width: 280px;
+}
+
+.era-marker {
+position: absolute;
+z-index: 20;
+width: 100px;
+height: 100px;
+background: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+cursor: pointer;
+transform-origin: 300px 300px;
+transform: rotate(var(--rotate));
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+border: 2px solid var(--secondary-color);
+}
+
+.era-marker:hover {
+transform: rotate(var(--rotate)) scale(1.2) translateY(-10px);
+background: var(--secondary-color);
+color: white;
+}
+
+/* ===== 内容区域 ===== */
+.content-section {
+position: relative;
+background: rgba(255,255,255,0.85);
+border-radius: 20px;
+padding: 1.5rem; /* 减少内边距 */
+box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+overflow-y: auto;
+height: calc(100vh - 100px); /* 动态高度 */
+max-height: 800px; /* 设置最大高度 */
+}
+
+.era-card {
+position: absolute;
+width: 100%;
+height: auto; /* 改为自动高度 */
+min-height: 100%;
+opacity: 0;
+transform: translateY(50px);
+transition: 1s cubic-bezier(0.4, 0, 0.2, 1);
+padding: 0 1rem 1rem; /* 调整内边距 */
+}
+
+.era-card.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+.timeline {
+position: relative;
+margin: 1rem 0; /* 减少外边距 */
+padding-left: 30px;
+border-left: 3px solid var(--primary-color);
+}
+
+.timeline-event {
+position: relative;
+margin-bottom: 1.5rem; /* 减少间距 */
+padding: 0.8rem; /* 减少内边距 */
+background: rgba(245,239,230,0.8);
+border-radius: 10px;
+transform: translateX(-30px);
+opacity: 0;
+transition: 0.8s;
+}
+
+.timeline-event::before {
+content: '';
+position: absolute;
+left: -38px;
+top: 15px;
+width: 20px;
+height: 20px;
+background: var(--secondary-color);
+border-radius: 50%;
+border: 3px solid var(--primary-color);
+}
+
+/* ===== 图片统一样式 ===== */
+.media-group img {
+display: block;
+margin: 0 auto;
+max-width: 90%;
+border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+border: 2px solid rgba(212,175,55,0.3);
+transition: transform 0.3s ease;
+}
+
+.media-group img:hover {
+transform: scale(1.02);
+box-shadow: 0 8px 20px rgba(154,59,38,0.2);
+}
+
+.media-group {
+margin: 1rem 0;
+text-align: center;
+}
+
+.timeline-event .media-group img {
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+.stage-preview {
+width: 100%;
+height: 250px; /* 减小高度 */
+overflow: hidden;
+border-radius: 15px;
+background: #fff;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 1rem 0; /* 减少间距 */
+}
+
+.stage-preview img {
+max-width: 90%;
+max-height: 90%;
+object-fit: contain;
+border-radius: 15px;
+box-shadow: 0 5px 20px rgba(154,59,38,0.2);
+border: 3px solid rgba(212,175,55,0.5);
+background: white;
+padding: 5px;
+}
+
+/* ===== 视频背景 ===== */
+.video-background {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: -2;
+overflow: hidden;
+}
+
+#bgVideo {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+min-width: 100%;
+min-height: 100%;
+object-fit: cover;
+opacity: 0.9;
+filter: grayscale(20%) contrast(1.1);
+}
+
+.video-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(
+ 45deg, 
+ rgba(245, 239, 230, 0.4) 0%,
+ rgba(245, 239, 230, 0.7) 100%
+);
+mix-blend-mode: multiply;
+}
+
+/* ===== 响应式设计 ===== */
+@media (max-width: 992px) {
+.nav-menu {
+ padding: 0.8rem 0;
+}
+.nav-item {
+ padding: 0.6rem 1rem;
+ font-size: 1rem;
+}
+}
+
+@media (max-width: 768px) {
+.content-section {
+ height: auto; /* 移动端恢复自动高度 */
+ max-height: none;
+}
+
+.main-container {
+ grid-template-columns: 1fr;
+}
+.timeline-wheel {
+ width: 300px;
+ height: 300px;
+}
+.era-marker {
+ width: 60px;
+ height: 60px;
+ font-size: 12px;
+ transform-origin: 150px 150px;
+}
+.center-image {
+ width: 150px;
+ height: 150px;
+}
+.center-description {
+ font-size: 12px;
+}
+.stage-preview {
+ height: 180px;
+}
+.nav-menu {
+ padding: 0.6rem 0;
+ gap: 0.5rem;
+}
+.nav-item {
+ padding: 0.5rem 0.8rem;
+ font-size: 0.9rem;
+}
+.nav-item span {
+ display: none;
+}
+.nav-item i {
+ font-size: 1.1rem;
+}
+}
+
+@keyframes wheel-glow {
+0% { transform: translateY(0) rotate(30deg); }
+100% { transform: translateY(-50%) rotate(30deg); }
+}
+

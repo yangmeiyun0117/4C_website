@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DAR体验 - 晋剧数字博物馆</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 添加样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "华文楷体", "KaiTi", "Microsoft YaHei", sans-serif;
+            background-color: #f5efe6;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        .back-button i {
+            color: #9a3b26;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3DAR体验内容 -->
+    <div id="ar-experience">
+        <!-- 这里是3DAR体验的内容 -->
+        <h1>3DAR体验页面</h1>
+        <p>这里是3DAR体验的内容。</p>
+    </div>
+    
+    <!-- 返回按钮 -->
+    <div class="back-button" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

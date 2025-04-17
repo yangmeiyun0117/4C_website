@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- <base href="../assets/images/historys/"> 添加基准路径 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="../assets/videos/背景3.mp4" type="video/mp4">
+            <img src="../assets/images/home/首页背景图2.png" alt="背景备用图片">
+        </video>
+        <div class="video-overlay"></div> -->
+    <!-- </div> -->
+    <title>历史沿革</title>
+    
+    <link rel="stylesheet" href="../css/history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   <!-- 导航菜单 -->
+   <nav class="nav-menu">
+    <a href="home.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>梨园初章</span>
+    </a>
+    <a href="history.html" class="nav-item active">
+        <i class="fas fa-history"></i>
+        <span>粉墨春秋</span>
+    </a>
+    <a href="map.html" class="nav-item">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>行当经纬</span>
+    </a>
+    <a href="roles.html" class="nav-item">
+        <i class="fas fa-masks-theater"></i>
+        <span>晋韵流芳</span>
+    </a>
+    <a href="instruments.html" class="nav-item">
+        <i class="fas fa-music"></i>
+        <span>八音琳琅</span>
+    </a>
+    <a href="costumes.html" class="nav-item">
+        <i class="fas fa-vest"></i>
+        <span>霓裳锦绣</span>
+    </a>
+    <a href="game.html" class="nav-item">
+        <i class="fas fa-gamepad"></i>
+        <span>乐园天地</span>
+    </a>
+    <a href="data-analysis.html" class="nav-item">
+        <i class="fas fa-chart-line"></i>
+        <span>数据观象</span>
+    </a>
+</nav>
+
+
+    <div class="main-container">
+        <!-- 左侧轮盘 -->
+        <div class="wheel-section">
+            <!-- 中心内容（移到轮盘外部） -->
+            <div class="center-content">
+                <img src="../assets/images/historys/民国戏台.jpg" alt="当前阶段图片" class="center-image">
+                <p class="center-description">民国革新时期简介...</p>
+            </div>
+            <!-- 轮盘 -->
+            <div class="timeline-wheel" id="mainWheel">
+                <!-- 阶段标记 -->
+                <div class="era-marker" style="--rotate: 0deg;">民国革新<br>(1912-1949)</div>
+                <div class="era-marker" style="--rotate: 72deg;">建国新生<br>(1950-1977)</div>
+                <div class="era-marker" style="--rotate: 144deg;">改革春风<br>(1978-1999)</div>
+                <div class="era-marker" style="--rotate: 216deg;">世纪新声<br>(2000-2019)</div>
+                <div class="era-marker" style="--rotate: 288deg;">数字传承<br>(2020-今)</div>
+                
+            </div>
+        </div>
+
+        <!-- 右侧内容 -->
+        <div class="content-section">
+            <!-- 民国革新时期 -->
+            <div class="era-card active" data-era="republic">
+                <h2 class="era-title">🎩 民国革新（1912-1949）</h2>
+                <div class="stage-preview">
+                    <img src="../assets/images/historys/民国戏台.jpg" alt="民国戏院" style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <h3>1925年：坤班兴起</h3>
+                        <p>太原成立首个女子晋剧班社"坤梨园"，打破男性垄断舞台的传统</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/女子晋剧班社坤梨园.jpg" alt="坤班演出"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <!-- <audio controls src="../assets/images/historys/kunban.mp3"></audio> -->
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <h3>1937年：抗战宣传</h3>
+                        <p>成立"山西抗日救亡剧社"，创编《血战平型关》等新剧目</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/血战平型关.jpg "style="max-width: 90%; max-height: 90%; object-fit: cover;" alt="抗战剧目">
+                            <!-- <video src="../assets/images/historys/video/kangzhan.mp4" controls></video> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 建国新生时期 -->
+            <div class="era-card" data-era="newchina">
+                <h2 class="era-title">🎗️ 建国新生（1950-1977）</h2>
+                <div class="stage-preview">
+                    <img src="../assets/images/historys/国营剧团.jpg" alt="国营剧团"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <h3>1953年：戏改运动</h3>
+                        <p>成立山西省晋剧院，整理改编传统剧目《打金枝》</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/打金枝.jpg" alt="打金枝"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <!-- <audio controls src="../assets/images/historys/audio/xigai.mp3"></audio> -->
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <h3>1960年：电影晋剧</h3>
+                        <p>首部晋剧电影《三关排宴》拍摄完成，全国放映</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/三关排宴.jpg"alt="三关排宴"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <!-- <video src="../assets/images/historys/video/sanguan.mp4" controls></video> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 改革春风时期 -->
+            <div class="era-card" data-era="reform">
+                <h2 class="era-title">🌅 改革春风（1978-1999）</h2>
+                <div class="stage-preview">
+                    <img src="../assets/images/historys/现代剧场.jpg" alt="现代剧场"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <h3>1985年：国际交流</h3>
+                        <p>首次赴法国参加"中国戏曲节"，演出《富贵图》</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/《富贵图》.jpg" alt="富贵图演出"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <!-- <audio controls src="../assets/images/historys/audio/faguo.mp3"></audio> -->
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <h3>1997年：校园传承</h3>
+                        <p>山西戏剧职业学院开设首个晋剧本科专业</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/山西戏剧职业学院开设首个晋剧本科专业.jpg "style="max-width: 90%; max-height: 90%; object-fit: cover;" alt="校园教学">
+                            <!-- <video src="../assets/images/historys/video/xueyuan.mp4" controls></video> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 世纪新声时期 -->
+            <div class="era-card" data-era="newcentury">
+                <h2 class="era-title">🌐 世纪新声（2000-2019）</h2>
+                <div class="stage-preview">
+                    <img src="../assets/images/historys/世纪新声.jpg" alt="世纪新声"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                    <!-- <video src="../assets/images/historys/video/modern-stage.mp4" controls></video> -->
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <h3>2006年：非遗认证</h3>
+                        <p>晋剧入选首批国家级非物质文化遗产名录</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/非遗认证.jpg" alt="非遗认证"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <!-- <audio controls src="../assets/images/historys/audio/feiyi.mp3"></audio> -->
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <h3>2015年：数字典藏</h3>
+                        <p>启动"晋剧数字基因库"项目，3D扫描保存传统服饰道具</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/3D扫描.jpg" alt="数字保存"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <div class="instrument-3d" data-model="costume-set"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数字传承时期 -->
+            <div class="era-card" data-era="digital">
+                <h2 class="era-title">💻 数字传承（2020-今）</h2>
+                <div class="stage-preview">
+                    <img src="../assets/images/historys/数字传承.jpg" alt="数字传承"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                    <div class="panorama-view" data-scene="virtual-stage"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <h3>2021年：云上晋剧</h3>
+                        <p>推出"晋剧数字人"小晋，抖音直播观看人次破亿</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/虚拟演员.jpg" alt="虚拟演员"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <!-- <video src="../assets/images/historys/video/digital-show.mp4" controls></video> -->
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <h3>2023年：元宇宙剧场</h3>
+                        <p>在百度希壤元宇宙平台建成首个晋剧数字剧场</p>
+                        <div class="media-group">
+                            <img src="../assets/images/historys/元宇宙.jpg" alt="元宇宙演出"style="max-width: 90%; max-height: 90%; object-fit: cover;">
+                            <!-- <audio controls src="../assets/images/historys/audio/metaverse.mp3"></audio> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="../js/history.js"></script>
+</body>

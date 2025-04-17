@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晋剧服饰文化交互展示</title>
+    <link rel="stylesheet" href="../css/costumes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+</head>
+<body>
+   <!-- 导航菜单 -->
+   <nav class="nav-menu">
+    <a href="home.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>梨园初章</span>
+    </a>
+    <a href="history.html" class="nav-item">
+        <i class="fas fa-history"></i>
+        <span>粉墨春秋</span>
+    </a>
+    <a href="map.html" class="nav-item">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>行当经纬</span>
+    </a>
+    <a href="roles.html" class="nav-item">
+        <i class="fas fa-masks-theater"></i>
+        <span>晋韵流芳</span>
+    </a>
+    <a href="instruments.html" class="nav-item">
+        <i class="fas fa-music"></i>
+        <span>八音琳琅</span>
+    </a>
+    <a href="costumes.html" class="nav-item active">
+        <i class="fas fa-vest"></i>
+        <span>霓裳锦绣</span>
+    </a>
+    <a href="game.html" class="nav-item">
+        <i class="fas fa-gamepad"></i>
+        <span>乐园天地</span>
+
+    <a href="data-analysis.html" class="nav-item">
+        <i class="fas fa-chart-line"></i>
+        <span>数据观象</span>
+    </a>
+</nav>
+
+    <!-- 轮播图 -->
+    <section class="carousel" id="home">
+        <div class="slide active">
+            <img src="../assets/images/costumes/首页武生.jpg" alt="武生服饰" style="width: auto; height: 700px;">
+            <div class="slide-text">
+                <h2>晋剧武生服饰</h2>
+                <p>白色硬靠以白色为主色调，绣有精美银色鱼鳞甲片等图案，背后插四面白色靠旗，造型威武，彰显武将的英武潇洒与高贵身份。</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../assets/images/costumes/首页旦角.jpg" alt="旦角服饰" style="width: auto; height: 700px;">
+            <div class="slide-text">
+                <h2>晋剧旦角服饰</h2>
+                <p>黄色绣有精美图案的长袍搭配华丽头饰，缀满珍珠、绒球等饰品，显得富贵端庄</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../assets/images/costumes/首页丑角.jpg" alt="丑角服饰" style="width: auto; height: 700px;">
+            <div class="slide-text">
+                <h2>晋剧丑角服饰</h2>
+                <p>图中丑角服饰以红色官袍为主，搭配黑色带翅帽，饰有补子，手持折扇，透着诙谐与官宦身份特色 。</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../assets/images/costumes/首页净角.jpg" alt="净角服饰" style="width: auto; height: 700px;">
+            <div class="slide-text">
+                <h2>晋剧净角服饰</h2>
+                <p>色彩鲜艳，绿衣绣龙、金衣华丽、红衣喜庆，搭配精致且装饰繁多的盔帽，脸谱造型夸张，尽显威严霸气与角色个性 。</p>
+            </div>
+        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+    </section>
+
+<!-- 服饰分类展示 -->
+<section class="category-group" id="game">
+    <h1>晋剧服饰分类</h1>
+    
+    <!-- 分类容器 -->
+    <div class="category-container">
+        <!-- 切换按钮 -->
+        <button class="category-btn prev">❮</button>
+        <button class="category-btn next">❯</button>
+
+        <!-- 生行 -->
+        <div class="category active">
+            <h2 class="category-title">生行服饰</h2>
+            <div class="cards-container">
+                <!-- 红生 -->
+                <div class="card" id="hongsheng" data-img="hongsheng.jpg"> 
+                    <div class="card-face card-front">
+                        <h3 class="role-title">红生</h3>
+                        <p class="role-subtitle">神威与忠义</p>
+                        <img src="../assets/images/costumes/红净卡通.png" alt="红生卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/红生.png" alt="红生动图" class="card-gif">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿绿蟒袍（关公专属）或扎绿靠，戴“五绺髯”（长胡子）。</p>
+                            <p class="role-description">脸谱红脸，眉心画“七星痣”，手持青龙偃月刀。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文老生 -->
+                <div class="card" id="wenlaosheng" data-img="wenlaosheng.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">文老生</h3>
+                        <p class="role-subtitle">儒雅与持重</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/文老生卡通.png" alt="文老生卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/文老生.png" alt="文老生动图" class="card-gif" style="width: auto; height: 190px;">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿“蟒袍”（官员）、“帔”（员外、文人）或“褶子”（平民）。</p>
+                            <p class="role-description">戴“髯口”（胡子），颜色按年龄分黑、黪（灰白）、白。
+                                                        穿“厚底靴”（显威严），帝王将相加“玉带”。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 武老生 -->
+                <div class="card" id="wulaosheng" data-img="wulaosheng.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">武老生</h3>
+                        <p class="role-subtitle">威严与刚毅</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/老生卡通.png" alt="武老生卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/武老生.png" alt="武老生动图" class="card-gif">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿“靠”（铠甲）或“箭衣”（武人便装），如《定军山》黄忠。</p>
+                            <p class="role-description">戴“髯口”（胡子），颜色按年龄分黑、黪（灰白）、白。
+                                                        穿“厚底靴”（显威严），帝王将相加“玉带”。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文小生 -->
+                <div class="card" id="wenxiaosheng" data-img="wenxiaosheng.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">文小生</h3>
+                        <p class="role-subtitle">清俊与文雅</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/小生卡通.png" alt="小生卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/文小生.png" alt="小生动图" class="card-gif">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿绣花“褶子”（书生）、“帔”（公子）。</p>
+                            <p class="role-description">不戴髯口，头戴“文生巾”或“武生冠”，穿薄底靴。</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 武小生 -->
+                <div class="card" id="wuxiaosheng" data-img="wuxiaosheng.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">武小生</h3>
+                        <p class="role-subtitle">英武与敏捷</p>
+                        <img src="../assets/images/costumes/武生卡通.png" alt="武生卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                            <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/武小生.png" alt="武小生动图" class="card-gif">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿“箭衣”（侠客）或“靠”（青年武将），如《吕布与貂蝉》吕布扎靠插翎子。</p>
+                            <p class="role-description">不戴髯口，头戴“文生巾”或“武生冠”，穿薄底靴。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 旦行 -->
+        <div class="category">
+            <h2 class="category-title">旦行服饰</h2>
+            <div class="cards-container">
+                <!-- 青衣 -->
+                <div class="card" id="qingyi" data-img="qingyi.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">青衣</h3>
+                        <p class="role-subtitle">端庄与婉约</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/青衣卡通.png" alt="青衣卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/青衣.png" alt="青衣动图" class="card-gif" style="width: auto; height: 180px;">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿“青褶子”（贫寒妇女）或“帔”（端庄夫人），如《三娘教子》王春娥。</p>
+                            <p class="role-description">素雅色调（青、白、蓝），长水袖，头戴“银钉头面”（朴素发饰）。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 花旦 -->
+                <div class="card" id="huadan" data-img="huadan.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">花旦</h3>
+                        <p class="role-subtitle">灵巧与俏丽</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/花旦卡通.png" alt="花旦卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/花旦.png" alt="花旦动图" class="card-gif">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿绣花“袄裙”（少女）或“帔”（小姐），如《打金枝》升平公主穿红帔。</p>
+                            <p class="role-description">色彩鲜艳（红、粉、绿），头戴“珠花”或“凤钗”，手持团扇或手帕。</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 老旦 -->
+                <div class="card" id="laodan" data-img="laodan.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">老旦</h3>
+                        <p class="role-subtitle">沧桑与慈祥</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/老旦卡通.png" alt="老旦卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/老旦.png" alt="老旦动图" class="card-gif" style="width: auto; height: 200px;">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿“香色帔”（老年贵妇）或“老斗衣”（贫婆），如《杨门女将》佘太君。</p>
+                            <p class="role-description">白发网子，手持拐杖，穿“福字履”（老年鞋）。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 彩旦 -->
+                <div class="card" id="caidan" data-img="caidan.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">彩旦</h3>
+                        <p class="role-subtitle">诙谐与夸张</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/彩旦卡通.png" alt="彩旦卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/彩旦.png" alt="彩旦动图" class="card-gif" style="width: auto; height: 240px;">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿夸张的花袄裙，如《拾玉镯》刘媒婆。</p>
+                            <p class="role-description">滑稽打扮，头戴大红花，脸点黑痣，手持大烟袋。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 刀马旦 -->
+                <div class="card" id="daomadan" data-img="daomadan.jpg">
+                    <div class="card-face card-front">
+                        <h3 class="role-title">刀马旦</h3>
+                        <p class="role-subtitle">飒爽与英气</p>
+                        <!-- 添加 GIF 动图 -->
+                        <img src="../assets/images/costumes/刀马旦卡通.png" alt="刀马旦卡通" class="card-gif" style="width: auto; height: 180px;">
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-image">
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/刀马旦.png" alt="刀马旦动图" class="card-gif">
+                        </div>
+                        <div class="card-text">
+                            <p class="role-description">穿“女靠”（铠甲+云肩）或“战裙袄裤”，如《穆柯寨》穆桂英。</p>
+                            <p class="role-description">头戴“翎子”（野鸡尾），腰佩宝剑，动作英武。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- 净行 -->
+            <div class="category">
+                <h2 class="category-title">净行服饰</h2>
+                <div class="cards-container">
+                    <!-- 大花脸 -->
+                    <div class="card" id="dahualian" data-img="dahualian.jpg">
+                        <div class="card-face card-front">
+                            <h3 class="role-title">大花脸</h3>
+                            <p class="role-subtitle">刚正与威严</p>
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/红净卡通.png" alt="大花脸卡通" class="card-gif" style="width: auto; height: 180px;">
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-image">
+                                <!-- 添加 GIF 动图 -->
+                                <img src="../assets/images/costumes/大花脸.png" alt="大花脸动图" class="card-gif" style="width: auto; height: 160px;">
+                            </div>
+                            <div class="card-text">
+                                <p class="role-description"><strong>服饰：</strong>穿“蟒袍”（文官，如包拯黑蟒）或“靠”（武将，如《金沙滩》杨七郎）。</p>
+                                <p class="role-description"><strong>特点：</strong>脸谱以黑、红为主，戴“蓬髯”（大胡子），声如洪钟。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 二花脸 -->
+                    <div class="card" id="erhualian" data-img="erhualian.jpg">
+                        <div class="card-face card-front">
+                            <h3 class="role-title">二花脸</h3>
+                            <p class="role-subtitle">粗犷与豪放</p>
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/黑净卡通.png" alt="二花脸卡通" class="card-gif" style="width: auto; height: 180px;">
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-image">
+                                <!-- 添加 GIF 动图 -->
+                                <img src="../assets/images/costumes/二花脸.png" alt="二花脸动图" class="card-gif" style="width: auto; height: 200px;">
+                            </div>
+                            <div class="card-text">
+                                <p class="role-description"><strong>服饰：</strong>穿“箭衣”（武人）或“短打”（草莽英雄），如《李逵下山》李逵。</p>
+                                <p class="role-description"><strong>特点：</strong>脸谱色彩对比强烈（绿、蓝、金），动作粗犷。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 白脸 -->
+                    <div class="card" id="bailian" data-img="bailian.jpg">
+                        <div class="card-face card-front">
+                            <h3 class="role-title">白脸</h3>
+                            <p class="role-subtitle">阴险与狡诈</p>
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/白净卡通.png" alt="白脸卡通" class="card-gif" style="width: auto; height: 180px;">
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-image">
+                                <!-- 添加 GIF 动图 -->
+                                <img src="../assets/images/costumes/白脸.png" alt="白脸" class="card-gif">
+                            </div>
+                            <div class="card-text">
+                                <p class="role-description"><strong>服饰：</strong>穿“白蟒”（如曹操）或“官衣”（贪官）。</p>
+                                <p class="role-description"><strong>特点：</strong>脸谱白色为主，勾“三角眼”，戴“短髯”。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 丑行 -->
+            <div class="category">
+                <h2 class="category-title">丑行服饰</h2>
+                <div class="cards-container">
+                    <!-- 文丑 -->
+                    <div class="card" id="wenchou" data-img="wenchou.jpg">
+                        <div class="card-face card-front">
+                            <h3 class="role-title">文丑</h3>
+                            <p class="role-subtitle">滑稽与机敏</p>
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/文丑卡通.png" alt="文丑卡通" class="card-gif" style="width: auto; height: 180px;">
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-image">
+                                <!-- 添加 GIF 动图 -->
+                                <img src="../assets/images/costumes/文丑.png" alt="文丑动图" class="card-gif" style="width: auto; height: 240px;">
+                            </div>
+                            <div class="card-text">
+                                <p class="role-description"><strong>服饰：</strong>穿“褶子”（书生丑）或“官衣”（小吏丑），如《徐九经升官记》。</p>
+                                <p class="role-description"><strong>特点：</strong>戴“圆翅纱帽”，鼻梁画“豆腐块”白粉，动作诙谐。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 武丑 -->
+                    <div class="card" id="wuchou" data-img="wuchou.jpg">
+                        <div class="card-face card-front">
+                            <h3 class="role-title">武丑</h3>
+                            <p class="role-subtitle">敏捷与诙谐</p>
+                            <!-- 添加 GIF 动图 -->
+                            <img src="../assets/images/costumes/武丑卡通.png" alt="武丑卡通" class="card-gif" style="width: auto; height: 180px;">
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-image">
+                                <!-- 添加 GIF 动图 -->
+                                <img src="../assets/images/costumes/武丑.png" alt="武丑动图" class="card-gif">
+                            </div>
+                            <div class="card-text">
+                                <p class="role-description"><strong>服饰：</strong>穿“夜行衣”（侠盗）或“快衣”（武丑），如《三岔口》刘利华。</p>
+                                <p class="role-description"><strong>特点：</strong>戴“鬃帽”，身手敏捷，常翻跟斗。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 修改后的 HTML 结构 -->
+<section class="costume-grid" id="costumes">
+    <!-- 第一行：3个卡片 -->
+    <div class="row-group">
+        <div class="costume-card" data-type="衣">
+            <img src="../assets/images/costumes/衣.png" alt="衣">
+            <h3>查看细节</h3>
+            <!-- <p>查看细节</p> -->
+        </div>
+        <div class="costume-card" data-type="蟒袍">
+            <img src="../assets/images/costumes/蟒袍.png" alt="蟒袍">
+            <h3>查看细节</h3>
+            <!-- <p>查看细节</p> -->
+        </div>
+        <div class="costume-card" data-type="靠">
+            <img src="../assets/images/costumes/靠.png" alt="靠">
+            <h3>查看细节</h3>
+            <!-- <p>查看细节</p> -->
+        </div>
+    </div>
+
+    <!-- 第二行：3个卡片 -->
+    <div class="row-group">
+        <div class="costume-card" data-type="裙">
+            <img src="../assets/images/costumes/裙.png" alt="裙">
+            <h3>查看细节</h3>
+            <!-- <p>查看细节</p> -->
+        </div>
+        <div class="costume-card" data-type="褶">
+            <img src="../assets/images/costumes/褶.png" alt="褶">
+            <h3>查看细节</h3>
+            <!-- <p>查看细节</p> -->
+        </div>
+        <div class="costume-card" data-type="帔">
+            <img src="../assets/images/costumes/帔.png" alt="帔">
+            <h3>查看细节</h3>
+            <!-- <p>查看细节</p> -->
+        </div>
+    </div>
+</section>
+
+<div class="hover-modal" id="costumeHoverModal">
+    <!-- 图片必须在前 -->
+    <img class="modal-image" alt="服饰展示">
+    
+    <!-- 文字容器在后 -->
+    <div class="text-container">
+        <div class="text-line"></div>
+        <div class="text-line"></div>
+        <div class="text-line"></div>
+        <div class="detail-text" style="display: none;">
+            <h4>服饰分类</h4>
+            <p class="sort-detail"></p>
+            <h4>工艺特点</h4>
+            <p class="craft-detail"></p>
+            <h4>文化寓意</h4>
+            <p class="culture-detail"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 服饰介绍数据
+    const costumeData = {
+        '衣': {
+            img: '../assets/images/costumes/衣服_老斗衣.jpg',
+            lines: [
+                '功能：书生、平民日常穿着，外穿或内搭',
+                '文褶：绣梅兰竹菊（如张生湖蓝褶子）',
+                '武褶：短打开衩（侠客行动利落）'
+            ],
+            // 新增详细数据
+            sort: "日常便衣类，像对襟衣直领对称，斜襟衣线条独特，琵琶襟衣便于行动，大襟衣款式传统，它们材质朴素，常为百姓日常劳作或普通生活场景穿着 ，满足基本活动和保暖需求。 ",
+            craft: "马蹄袖内衬硬麻布实现自动回弹，开衩处缝三角暗袋可藏兵刃，龙箭衣金线鳞片需逐片手工钉缝，晋北特制毛边箭袖凸显塞外风情。",
+            culture: "白色箭衣塑造忠勇偶像（如赵云），束腰'活擒死扣'区别自由与效死，保留满族骑射袖型暗含民族记忆。"
+        },
+
+        '蟒袍': {
+            img: '../assets/images/costumes/衣服_黄团龙蟒.jpg' ,
+            lines: [
+                '功能：皇室与重臣朝服，等级森严',
+                '纹样：五爪龙（皇帝）、四爪蟒（臣子），下摆绣“江崖海水”纹',
+                '颜色等级：黄蟒（帝王）、红蟒（忠臣）、黑蟒（包拯刚正）'
+            ],
+            // 新增详细数据
+            sort: "不同颜色和样式对应不同人物，如红团龙蟒用于身份高、性格文静者；绿团龙蟒为红脸忠义之士用；黄团龙蟒专供帝王；白色团龙蟒用于青年武将或中年武生；黑色行龙蟒适合庄重、刚直或性格粗犷豪放者 ；团凤女蟒、老旦蟒分别为尊贵女性和有身份老年妇女使用。 ",
+            craft: "以缂丝为底，'通经断纬'技法使图案正反如一，龙蟒鳞片采用'打籽绣'密达300针/平方厘米，下摆海水江崖纹以'三蓝渐变'绣法呈现波涛层次，龙眼嵌珍珠更显尊贵。",
+            culture: "五爪龙与四爪蟒严格区分君臣等级，黄色专属皇权、红色象征忠烈、黑色代表铁面，江崖海水纹寄托'江山永固'的政治理想。"
+        },
+
+        '靠': {
+            img: '../assets/images/costumes/衣服_硬靠.jpg',
+            lines: [
+                '功能：战场戎装，分硬靠（带旗）与软靠（无旗）',
+                '形制：鱼鳞甲纹刺绣，背插四面三角形靠旗（晋剧靠旗比京剧更宽大）',
+                '颜色象征：绿靠（关羽忠义）、黑靠（张飞刚猛）、白靠（赵云儒将）'
+            ],
+            // 新增详细数据
+            sort: "武将通用戎服，硬靠用于战斗场合，象征古代铠甲，有四面靠旗；软靠不扎靠旗，用于非战斗场合；霸王靠为项羽专用；关羽靠为晋剧舞台上关羽专用 。 ",
+            craft: "采用苏绣工艺，金线密度达2采用多层复合工艺，缎面为底内衬帆布，外绣立体鱼鳞甲纹，靠旗杆为弹性竹制插入牛皮背套，靠肚运用'堆绣'工艺使虎头纹凸起，晋剧特有的宽大靠旗舞动时铃铛作响，展现武将威严。",
+            culture: "四面靠旗象征千军万马，体现统帅之力；颜色密码中绿靠表忠义、黑靠显刚烈、白靠示智勇，卸靠旗的仪式更暗含'魂归天地'的悲壮情怀。"
+        },
+        '裙': {
+            img: '../assets/images/costumes/衣服_裙.jpg',
+            lines: [
+                '马面裙：前后光面+两侧百褶，绣花鸟（如青衣配白裙）',
+                '战裙：刀马旦专用，缀亮片（如穆桂英红靠配金纹战裙）',
+                '穿法：长裙掩足，仅露彩鞋尖（旦角步态含蓄）'
+            ],
+            // 新增详细数据
+            sort: "晋剧中裙的分类相对较少但特色鲜明。女蟒可视为裙装的一种特殊形式，与男蟒款式类似但有自身特点，常用于尊贵女性角色，如皇后、贵妃等，色彩多为黄、红，彰显身份。还有一些角色所着的褶裙，根据人物身份性格，在颜色、纹饰上有不同设计，比如表现平民女性的褶裙较为朴素，而大家闺秀的褶裙则可能有精致的花纹 。 ",
+            craft: "裙门'绣画合一'呈现工笔花鸟，百褶以米浆定型可百年不散，刀马旦战裙夹层缀铜钱沙沙作响，裙裾六幅或十二幅对应身份等级。",
+            culture: "裙幅数理暗合'天地六合'宇宙观，寡妇单禽纹避讳成双，穆桂英火焰纹战裙颠覆'女不主兵'的传统观念。"
+        },
+        '褶': {
+        img: '../assets/images/costumes/衣服_文小生花褶.jpg',
+        lines: [
+            '功能：武将便服或出行装，便于行动',
+            '形制：圆领紧身，下摆开衩，绣团花纹',
+            '等级：龙箭衣（帝王）、花箭衣（将领）'
+            ],
+            // 新增详细数据
+            sort: "种类丰富，用于不同身份和性格的人物，如书生、武将、性格粗犷者、迂腐文吏、武艺高强的丑角等。还有青褶子（穷书生用）、海青（下层社会人物及仆人用）、老斗衣（老年劳动人民用） 、色褶子（中老年男性平民用） 、短跳（较短的褶子）、富贵衣（象征落魄但未来会富贵者） 、女花褶子（平民女子用） 、女青褶子（贫苦妇女用） 、改良女青褶子、女白褶子、老旦褶子等。 ",
+            craft: "采用苏绣工艺，金线密度达2采用多层复合工艺，缎面为底内衬帆布，外绣立体鱼鳞甲纹，靠旗杆为弹性竹制插入牛皮背套，靠肚运用'堆绣'工艺使虎头纹凸起，晋剧特有的宽大靠旗舞动时铃铛作响，展现武将威严。",
+            culture: "四面靠旗象征千军万马，体现统帅之力；颜色密码中绿靠表忠义、黑靠显刚烈、白靠示智勇，卸靠旗的仪式更暗含'魂归天地'的悲壮情怀。"
+        },
+        '帔': {
+            img: '../assets/images/costumes/衣服_皇帔.jpg',
+            lines: [
+                '功能：贵族日常便服，男女款式不同',
+                '男帔：对襟长袍，绣团鹤纹（如诸葛亮鹤氅）',
+                '女帔：及膝绣凤凰牡丹（如升平公主红帔）'
+            ],
+            // 新增详细数据
+            sort: "源于明代贵族妇女礼服，有皇帔（帝王专用）、女皇帔（皇后、贵妃用）、红帔（用于喜庆场合）、团花帔（中级官吏等用）、女团花帔（已婚青年妇女用） 。 ",
+            craft:"对襟镶7cm宽边暗藏'富贵不断头'纹，女帔枝子花采用'抢针绣'实现花瓣渐变，晋中特制暗袋可藏道具，袖口同心结绣纹需手工打籽十万余针。",
+            culture: "纹样严格区分性别与辈分——团鹤喻男德、折枝花表女贞，紫色限长辈彰显礼制，红帔婚服袖口同心结暗喻姻缘天定。"
+        }
+    };
+
+    // 获取元素
+        const costumeCards = document.querySelectorAll('.costume-card');
+        const modal = document.getElementById('costumeHoverModal');
+        const modalImg = modal.querySelector('.modal-image');
+        const textLines = modal.querySelectorAll('.text-line');
+        const craftDetail = document.querySelector('.craft-detail');
+        const cultureDetail = document.querySelector('.culture-detail');
+
+    // 状态控制
+    let isModalExpanded = false;
+    let activeCard = null;
+
+    // 点击事件处理
+    function handleCardClick(event) {
+        event.stopPropagation();
+        const card = event.currentTarget;
+
+        if (isModalExpanded && activeCard === card) {
+            // 第二次点击同一卡片：关闭模态框
+            closeModal();
+        } else {
+            // 第一次点击：打开模态框
+            activeCard = card;
+            openModal(card);
+        }
+    }
+
+    // 修改后的openModal函数
+    function openModal(card) {
+
+        const type = card.dataset.type;
+        const data = costumeData[type];
+
+        // 填充所有文本内容
+        textLines.forEach((line, index) => {
+            line.textContent = data.lines[index] || '';  // 关键修复：填充文本内容
+            line.style.display = 'block';
+            line.style.opacity = '1';
+        });
+
+        modalImg.src = data.img;
+
+        // 强制居中
+        modal.classList.remove('reverse'); // 移除反向样式
+        modal.style.left = '50%';
+        modal.style.top = '50%';
+        modal.style.transform = 'translate(-50%, -50%)';
+        
+        // 应用展开样式
+        modal.classList.add('expanded', 'active');
+        isModalExpanded = true;
+
+        // 填充详细数据
+        document.querySelector('.sort-detail').textContent = data.sort;
+        document.querySelector('.craft-detail').textContent = data.craft;
+        document.querySelector('.culture-detail').textContent = data.culture;
+
+        // 更新图片
+        modalImg.src = data.img;
+
+        // 应用展开样式
+        modal.classList.add('expanded', 'active');
+        isModalExpanded = true;
+
+        // 禁用其他卡片交互
+        costumeCards.forEach(c => {
+            if (c !== card) {
+                c.style.pointerEvents = 'none';
+                c.style.opacity = 0.5;
+                c.style.filter = 'blur(2px)';
+            }
+        });
+
+        // 锁定页面滚动
+        document.body.style.overflow = 'hidden';
+
+        // 显示详细内容
+        setTimeout(() => {
+            modal.querySelector('.detail-text').style.display = 'block';
+            modal.querySelector('.detail-text').style.opacity = 1;
+        }, 300);
+    }
+
+    function closeModal() {
+        // 重置所有样式
+        modal.classList.remove('expanded', 'active', 'reverse');
+        modal.style.left = '';
+        modal.style.top = '';
+        modal.style.right = '';
+        modal.style.bottom = '';
+        modal.style.transform = '';
+        modal.style.width = '';
+        modal.style.height = '';
+        
+        isModalExpanded = false;
+        activeCard = null;
+
+        // 恢复其他卡片交互
+        costumeCards.forEach(c => {
+            c.style.pointerEvents = 'auto';
+            c.style.opacity = 1;
+            c.style.filter = 'none';
+        });
+
+        // 恢复页面滚动
+        document.body.style.overflow = 'auto';
+
+        // 隐藏详细内容
+        modal.querySelector('.detail-text').style.display = 'none';
+        modal.querySelector('.detail-text').style.opacity = 0;
+    }
+
+    // 新增键盘关闭支持
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isModalExpanded) {
+            closeModal();
+        }
+    });
+
+    // 悬停事件处理（仅在非展开状态生效）
+    function handleHover(event) {
+    if (isModalExpanded) return;
+
+    const card = event.currentTarget;
+    const type = card.dataset.type;
+    const data = costumeData[type];
+
+    // 更新内容
+    modalImg.src = data.img;
+    textLines.forEach((line, i) => {
+        line.textContent = data.lines[i] || '';
+    });
+
+    // 计算位置
+    const index = Array.from(costumeCards).indexOf(card);
+    const cardRect = card.getBoundingClientRect();
+    const modalWidth = 600; // 使用固定宽度避免offsetWidth变化
+    const modalHeight = 320; // 使用固定高度
+
+    // 判断是否为需要左侧显示的卡片（第3、6张）
+    if (index === 2 || index === 5) {
+        modal.classList.add('reverse');
+        
+        // 左侧定位：卡片左侧 - 模态框宽度 - 间距20px
+        let leftPos = cardRect.left - modalWidth - 80;
+        
+        // 如果左侧空间不足，改为右侧显示
+        if (leftPos < 20) {
+            leftPos = cardRect.right + 20;
+            modal.classList.remove('reverse');
+        }
+        
+        modal.style.left = `${leftPos}px`;
+    } else {
+        modal.classList.remove('reverse');
+        
+        // 右侧定位：卡片右侧 + 间距20px
+        let leftPos = cardRect.right + 20;
+        
+        // 如果右侧空间不足，改为左侧显示
+        if (leftPos + modalWidth > window.innerWidth - 20) {
+            leftPos = cardRect.left - modalWidth - 20;
+            modal.classList.add('reverse');
+        }
+        
+        // 如果两侧都不够，固定在视口边缘
+        if (leftPos < 20) leftPos = 20;
+        if (leftPos + modalWidth > window.innerWidth) {
+            leftPos = window.innerWidth - modalWidth - 20;
+        }
+        
+        modal.style.left = `${leftPos}px`;
+    }
+
+    // 垂直居中定位
+    let topPos = cardRect.top + (cardRect.height - modalHeight) / 2;
+    
+    // 边界检测
+    if (topPos < 20) topPos = 20;
+    if (topPos + modalHeight > window.innerHeight) {
+        topPos = innerHeight - modalHeight - 20;
+    }
+    
+    modal.style.top = `${topPos}px`;
+    modal.style.transform = 'none';
+    modal.classList.add('active');
+}
+
+    // 事件绑定
+    costumeCards.forEach(card => {
+        // 点击事件
+        card.addEventListener('click', handleCardClick);
+        
+        // 悬停事件（初始绑定）
+        card.addEventListener('mouseenter', handleHover);
+        card.addEventListener('mouseleave', () => {
+            if (!isModalExpanded) modal.classList.remove('active');
+        });
+    });
+
+    // 点击外部关闭
+    document.addEventListener('click', (event) => {
+        if (!modal.contains(event.target)) {
+            closeModal();
+        }
+    });
+
+    // 窗口调整处理
+    window.addEventListener('resize', () => {
+        if (!isModalExpanded) {
+            modal.classList.remove('active');
+        }
+    });
+
+    window.addEventListener('resize', () => {
+    if (!isModalExpanded && modal.classList.contains('active')) {
+        // 重新触发悬停计算
+        const activeCard = document.querySelector('.costume-card:hover');
+        if (activeCard) {
+            handleHover({currentTarget: activeCard});
+        }
+      }
+    });
+</script>
+ 
+
+<!-- 视频模块 -->
+<section class="video-section" id="video">
+    <h2>晋剧服饰与化妆</h2>
+    <div class="video-wrapper">
+        <video controls>
+            <source src="../assets/images/costumes/video0.mp4" type="video/mp4">
+            您的浏览器不支持视频播放
+        </video>
+    </div>
+</section>
+
+<!-- 关于晋剧模块 -->
+<!-- 修改后的HTML部分 -->
+<section class="about-section" id="about">
+    <div class="about-container">
+        <h2 class="section-title">关于晋剧服饰</h2>
+        <div class="vertical-columns">
+            <!-- 历史渊源 -->
+            <div class="vertical-card" style="--bg-image: url('../assets/images/costumes/背景4.jpg'); --opacity: 0.3;">
+                <div class="card-overlay"></div>
+                <div class="card-content-wrapper">
+                    <h3 class="card-title">历史渊源</h3>
+                    <p class="card-content">晋剧服饰的历史渊源深厚，融合了宋元以来的戏曲服饰特点，并吸收了山西地方文化的精华。经过明清时期的定型与现代的创新，晋剧服饰形成了独特的艺术风格，既保留了传统戏曲服饰的华丽与精致，又具有浓厚的地方特色，成为晋剧艺术的重要组成部分。其发展演变过程反映了山西地区的历史变迁和文化融合，从早期的简单粗犷到后期的精美细腻，每一时期的服饰都承载着特定的历史文化信息。</p>
+                </div>
+            </div>
+            
+            <!-- 图案寓意 -->
+            <div class="vertical-card" style="--bg-image: url('../assets/images/costumes/背景2.jpg'); --opacity: 0.3;">
+                <div class="card-overlay"></div>
+                <div class="card-content-wrapper">
+                    <h3 class="card-title">图案寓意</h3>
+                    <p class="card-content">晋剧服饰上的图案丰富多样，每种图案都有其特定的寓意。龙凤图案是晋剧服饰中最常见的图案之一，龙代表着皇帝，凤代表着皇后，龙凤呈祥象征着吉祥如意、幸福美满。花卉图案也被广泛应用，如牡丹象征着富贵，梅花寓意着高洁，莲花代表着纯洁，不同的花卉图案根据角色的性格和身份进行选择。此外，还有一些几何图案、吉祥文字等，如万字纹、寿字纹等，这些图案都蕴含着美好的祝福和寓意。特别值得注意的是，晋剧服饰中的图案布局讲究对称均衡，色彩搭配遵循"上五色"和"下五色"的传统规范。</p>
+                </div>
+            </div>
+            
+            <!-- 制作工艺 -->
+            <div class="vertical-card" style="--bg-image: url('../assets/images/costumes/背景3.jpg'); --opacity: 0.3;">
+                <div class="card-overlay"></div>
+                <div class="card-content-wrapper">
+                    <h3 class="card-title">制作工艺</h3>
+                    <p class="card-content">晋剧服饰的制作工艺十分精湛，通常采用传统的手工技艺，如刺绣、缂丝、手绘等。刺绣是晋剧服饰中最常见的装饰手法，工匠们运用各种针法，绣出精美的图案，如龙凤、花卉、人物等，针法细腻，色彩鲜艳，富有立体感。缂丝工艺则常用于制作一些高档的服饰，其质地柔软，图案精美，具有很高的艺术价值。手绘也是晋剧服饰制作中的重要环节，画师们用颜料在服饰上绘制出各种图案和花纹，使服饰更加生动逼真。一套完整的晋剧服饰需要经过设计、裁剪、刺绣、拼接、装饰等三十多道工序，每道工序都由专业匠人手工完成，体现了中国传统手工艺的精湛技艺。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="../js/costumes.js"></script>
+</body>
+</html>
